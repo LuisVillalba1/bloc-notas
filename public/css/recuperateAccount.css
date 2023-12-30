@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --negro : rgb(0 0 0);
+    --blanco : rgb(255 255 255);
+    --girsOscuro : rgb(57, 55, 55);
+}
+
+body{
+    overflow: hidden;
+    background-image: url("../imgs/bosque_invierno.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.success{
+    font-size: 20px;
+}
+
+.main_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--negro);
+}
+
+.form_container{
+    padding: 20px;
+}
+
+.text_content{
+    padding: 10px 5px;
+}
+
+.text_content h2{
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+
+.input_container{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input_container input{
+    width: 100%;
+    padding: 10px 29px 10px 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--blanco);
+    background: transparent;
+    font-size: 100%;
+}
+
+.input_container input::placeholder{
+    color: var(--blanco);
+}
+
+.input_container i{
+    position: absolute;
+    top: 28%;
+    right: 10px;
+    color: var(--blanco);
+}
+
+.send_btn{
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 100%;
+}
+
+.send_btn:hover{
+    cursor: pointer;
+}
+
+
+@media screen and (min-width:1600px) {
+    .input_container input{
+        border: 1px solid var(--girsOscuro);
+    }
+
+    .input_container input::placeholder{
+        color: var(--negro);
+    }
+
+    .input_container i{
+        color: var(--negro);
+    }
+}
+
+
