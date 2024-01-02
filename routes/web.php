@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("/error",function(){
+    return view("errorPage");
+})->name("error");
+
 //controlador para ingresar a el block de notas
 Route::controller(Ingresar::class)->group(function(){
     Route::get("/","index")->name("main");
@@ -29,11 +33,11 @@ Route::controller(Ingresar::class)->group(function(){
 
 // controlador para recuperar la cuenta
 Route::controller(RecuperateAccount::class)->group(function(){
-    Route::get("/forgotPassword","forgotPassword")->name("forgotPassword");
-    Route::post("/forgotPassword","recuperateAccount")->name("recuperateAccount");
+    Route::get("/forgotPassword","index")->name("forgotPassword");
+    Route::post("/forgotPassword","sendRecoveryLink")->name("recuperateAccount");
 
-    Route::get("/changePassword/{id}","changePassword")->name("changePassword")->middleware("signed");
-    Route::Put("/changePassword/{id}","change")->name("changePasswordPut");
+    Route::get("/changePassword/{id}","showChangePassword")->name("changePassword")->middleware("signed");
+    Route::put("/changePassword/{id}","changePassword")->name("changePasswordPut")->middleware("signed");
 });
 
 //controlador con un middleware para el block de notas

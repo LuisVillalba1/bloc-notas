@@ -21,12 +21,18 @@ class Bloc extends Model
 
     public function show(){
         //obtenemos todos los blocs del usuario autenticado
-        $usuario = Auth::user();
-        $bloc = Bloc::whereHas("usuario",function($query) use ($usuario){
-            $query->where("UsuarioID",$usuario->UsuarioID);
-        })->get();
-
-        return $bloc;
+        try{
+            $usuario = Auth::user();
+            $bloc = Bloc::whereHas("usuario",function($query) use ($usuario){
+                $query->where("UsuarioID",$usuario->UsuarioID);
+            })->get();
+    
+            return $bloc;
+        }
+        catch(\Exception $e){
+            session()->put("error","Ha ocurrido un error al obtener las notas");
+            return redirect()->route("error");
+        }
     }
 
     public function create($request){

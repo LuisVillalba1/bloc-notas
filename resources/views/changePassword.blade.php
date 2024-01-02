@@ -11,7 +11,7 @@
 
 @section('content')
     <div class="main_container">
-        <form action="{{route("changePasswordPut",["id"=>$id])}}" method="POST">
+        <form action="{{$link}}" method="POST">
             <h2>Nueva contraseña</h2>
             <div class="text_content_container">
                 <p>Por favor ingrese una nueva contraseña que no uses en otro sitio</p>
