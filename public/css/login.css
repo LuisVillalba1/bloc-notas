@@ -92,6 +92,7 @@ form h2{
 }
 
 .forgot_password{
+    margin-top: 2px;
     color: var(--blanco);
     text-decoration: none;
 }

@@ -26,7 +26,7 @@ class RecuperateAccountTest extends TestCase
 
     //enviamos un mail al usuario para recuperar su cuenta
     public function test_forgotPassword(){
-        //Con mail fake simulamos el envio de correos electronicos, no lo hacemos de verdad
+        //Con mail fake simulamos el envio de correos electronicos
         Mail::fake();
         
         $usuario = Usuario::factory()->create();

@@ -21,39 +21,49 @@
             <h3>Crea una nueva cuenta</h3>
             @csrf
             <div class="personal_data">
-                <div class="input_container">
-                    <input type="text" placeholder="Nombre" autocomplete="name" name="nombre">
-                    <i class="fa-solid fa-user"></i>
+                <div class="input_with_error">
+                    <div class="input_container">
+                        <input type="text" placeholder="Nombre" autocomplete="name" name="nombre">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
                     @error('nombre')
                         <p class="error_message">{{$message}}</p>
                     @enderror
                 </div>
-                <div class="input_container">
-                    <input type="text" placeholder="Apellido" autocomplete="family-name" name="apellido">
-                    <i class="fa-solid fa-user"></i>
+                <div class="input_with_error">
+                    <div class="input_container">
+                        <input type="text" placeholder="Apellido" autocomplete="family-name" name="apellido">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
                     @error('apellido')
                         <p class="error_message">{{$message}}</p>
                     @enderror
                 </div>
             </div>
             <div class="contact_data">
-                <div class="input_container">
-                    <input type="text" placeholder="Nombre de usuario" autocomplete="username" name="usuario">
-                    <i class="fa-solid fa-circle-user"></i>
+                <div class="input_with_error">
+                    <div class="input_container">
+                        <input type="text" placeholder="Nombre de usuario" autocomplete="username" name="usuario">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
                     @error('usuario')
                         <p class="error_message">{{$message}}</p>
                     @enderror
                 </div>
-                <div class="input_container">
-                    <input type="email" placeholder="Email" autocomplete="email" name="email">
-                    <i class="fa-solid fa-envelope"></i>
+                <div class="input_with_error">
+                    <div class="input_container">
+                        <input type="email" placeholder="Email" autocomplete="email" name="email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
                     @error('email')
                         <p class="error_message">{{$message}}</p>
                     @enderror
                 </div>
-                <div class="input_container">
-                    <input type="password" placeholder="Contraseña" autocomplete="current-password" name="password">
-                    <i class="fa-solid fa-lock"></i>
+                <div class="input_with_error">
+                    <div class="input_container">
+                        <input type="password" placeholder="Contraseña" autocomplete="current-password" name="password">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
                     @error('password')
                         <p class="error_message">{{$message}}</p>
                     @enderror
