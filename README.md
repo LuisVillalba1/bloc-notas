@@ -22,6 +22,10 @@ Como dijimos, esta app sera un bloc de notas personal, por lo cual el usuario qu
 Para poder utilizar esta app es necesario tener intalado php,MySQL,disponer de un email para que los usuarios puedan recuperar su cuenta,asi como contar con un servidor web como xammp.
 Por siguiente sera necesario clonar el repositorio
 
+```bash
+git clone https://github.com/LuisVillalba1/bloc-notas?tab=readme-ov-file
+```
+
 ### configuracion
 
 Para comenzar es importante realizar un par de configuraciones.Esta app utilizara MySQL y un mail para recuperar la cuenta
